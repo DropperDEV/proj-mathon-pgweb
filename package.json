@@ -1,14 +1,14 @@
 {
   "name": "proj-mathon-pgweb",
   "version": "1.0.0",
-  "description": "",
+  "description": "Js tailwind project school",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch",
-    "newcss": "npx tailwindcss -o ./dist/style.css"
+    "newcss": "tailwindcss -o ./dist/style.css"
   },
-  "author": "",
+  "author": "James Costa",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.2"
