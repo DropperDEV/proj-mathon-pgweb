@@ -621,6 +621,30 @@ video {
   margin-top: 13rem;
 }
 
+.-mr-14 {
+  margin-right: -3.5rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.ml-24 {
+  margin-left: 6rem;
+}
+
+.mr-8 {
+  margin-right: 2rem;
+}
+
+.mr-12 {
+  margin-right: 3rem;
+}
+
+.mr-16 {
+  margin-right: 4rem;
+}
+
 .flex {
   display: flex;
 }
@@ -671,6 +695,14 @@ video {
   width: 100%;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -709,6 +741,11 @@ video {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-pink-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 72 153 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/img\/hero-pattern\.svg\'\)\] {
