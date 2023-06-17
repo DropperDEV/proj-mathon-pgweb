@@ -5,85 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Math On</title>
     <link rel="stylesheet" href="style.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </head>
   <body
     class="w-full h-full bg-no-repeat bg-left bg-fixed bg-cover 2xl:min-h-screen bg-[url('../src/assets/img/planets-2120004.jpg')] ">
-    <header class="bg-transparent flex w-full h-fit p-4 mb-7 xl:mb-16 xl:shadow-2xl">
-      <nav class="container flex justify-between px-4 py-8 mx-auto bg-transparent xl:p-6 ">
-        <div>
-          <img src="../src/assets/img/logo.png" alt="" class="w-10 h-10 mr-3" />
+    <header class="flex w-full p-4 bg-slate-900 bg-opacity-60 h-fit mb-7 xl:mb-16 xl:shadow-2xl ">
+      <nav class="container flex justify-between px-4 py-8 mx-auto md:flex md:items-center md:justify-between xl:p-6">
+        <div class="flex items-center justify-between flex-grow ">
+          <span class="flex flex-row items-center  justify-center text-2xl font-[arial] cursor-pointer text-gray-50 ">
+            <img   src="../src/assets/img/logo.png" alt="" class="inline w-10 h-10 mr-3 " />
+            <h1>MATH ON</h1>
+          </span>
+          <span class="block mx-2 text-3xl cursor-pointer md:hidden">
+            <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+          </span>
         </div>
-        <div class="hidden space-x-8 lg:flex">
-          <a class="xl: border-b xl:border-sky-700 xl:pt-3 xl:hover:text-gray-50 xl:transit xl:ease-in-out duration-300 xl:text-gray-400" href="#">Menu 1</a>
-          <a class="xl: border-b xl:border-sky-700 xl:pt-3 xl:hover:text-gray-50 xl:transit xl:ease-in-out duration-300 xl:text-gray-400" href="#">Menu 2</a>
-          <a class="xl: border-b xl:border-sky-700 xl:pt-3 xl:hover:text-gray-50 xl:transit xl:ease-in-out duration-300 xl:text-gray-400" href="#">Menu 3</a>
-          <a class="xl: border-b xl:border-sky-700 xl:pt-3 xl:hover:text-gray-50 xl:transit xl:ease-in-out duration-300 xl:text-gray-400" href="#">Menu 4</a>
-        </div>
-        <div class="flex lg:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </div>
+    
+        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-slate-900 bg-opacity-60 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 xl:bg-opacity-5">
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl text-gray-200 duration-300 border-b xl: border-sky-700 xl:pt-3 xl:hover:text-gray-50 xl:transit xl:ease-in-out xl:text-gray-400">HOME</a>
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl text-gray-200 duration-300 border-b xl: border-sky-700 xl:pt-3 xl:hover:text-gray-50 xl:transit xl:ease-in-out xl:text-gray-400">SERVICE</a>
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl text-gray-200 duration-300 border-b xl: border-sky-700 xl:pt-3 xl:hover:text-gray-50 xl:transit xl:ease-in-out xl:text-gray-400">ABOUT</a>
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl text-gray-200 duration-300 border-b xl: border-sky-700 xl:pt-3 xl:hover:text-gray-50 xl:transit xl:ease-in-out xl:text-gray-400">CONTACT</a>
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl text-gray-200 duration-300 border-b xl: border-sky-700 xl:pt-3 xl:hover:text-gray-50 xl:transit xl:ease-in-out xl:text-gray-400">BLOG'S</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main class="ml-7 xl:ml-24">
-      <div class="text-gray-200 text-5xl font-sans font-medium mb-8 xl:mb-16 -ml-5">
+      <div class="mb-8 -ml-5 font-sans text-5xl font-medium text-gray-200 xl:mb-16">
         <h1 class="font-semibold">Todas as calculadoras</h1>
       </div>
       <div>
-        <ul class="text-gray-200  text-2xl font-sans font-medium mb-10 xl:mb-16 -ml-4">
+        <ul class="mb-10 -ml-4 font-sans text-2xl font-medium text-gray-200 xl:mb-16">
           <p class="border-b border-sky-700 w-fit">Física</p>
-          <li class="mb-2 mt-2 text-xl">
+          <li class="mt-2 mb-2 text-xl">
             <a href="#">Acelereção constante</a>
           </li>
-          <li class="mb-2 mt-2 text-xl">
+          <li class="mt-2 mb-2 text-xl">
             <a href="#">Pressão média, psia</a>
           </li>
         </ul>
-        <ul class="text-gray-200  text-2xl font-sans font-medium mb-10 xl:mb-16 -ml-4">
+        <ul class="mb-10 -ml-4 font-sans text-2xl font-medium text-gray-200 xl:mb-16">
           <p class="border-b border-sky-700 w-fit">Matemática</p>
-          <li class="mb-2 mt-2 text-xl">
+          <li class="mt-2 mb-2 text-xl">
             <a href="#">Fatorial</a>
           </li>
-          <li class="mb-2 mt-2 text-xl">
+          <li class="mt-2 mb-2 text-xl">
             <a href="#">Área do quadrado</a>
           </li>
         </ul>
-        <ul class="text-gray-200  text-2xl font-sans font-medium mb-10 xl:mb-16 -ml-4">
+        <ul class="mb-10 -ml-4 font-sans text-2xl font-medium text-gray-200 xl:mb-16">
           <p class="border-b border-sky-700 w-fit">Química</p>
-          <li class="mb-2 mt-2 text-xl">
+          <li class="mt-2 mb-2 text-xl">
             <a href="#">Balanceamento de equações químicas</a>
           </li>
         </ul>
-        <ul class="text-gray-200  text-2xl font-sans font-medium mb-10 xl:mb-16 -ml-4">
+        <ul class="mb-10 -ml-4 font-sans text-2xl font-medium text-gray-200 xl:mb-16">
           <p class="border-b border-sky-700 w-fit">Data e Hora</p>
-          <li class="mb-2 mt-2 text-xl">
+          <li class="mt-2 mb-2 text-xl">
             <a href="#">Contador de dias entre datas</a>
           </li>
         </ul>
-        <ul class="text-gray-200  text-2xl font-sans font-medium mb-10 xl:mb-16 -ml-4">
+        <ul class="mb-10 -ml-4 font-sans text-2xl font-medium text-gray-200 xl:mb-16">
           <p class="border-b border-sky-700 w-fit">Computação</p>
-          <li class="mb-2 mt-2 text-xl">
+          <li class="mt-2 mb-2 text-xl">
             <a href="#">Gerador de Senha</a>
           </li>
         </ul>
       </div>
     </main>
     <footer>
-      <div class="w-full h-16 bg-slate-900 flex justify-center items-center">
+      <div class="flex items-center justify-center w-full h-16 bg-slate-900">
         <h3 class="text-gray-200">Todos os direitos reservados.</h3>
       </div>
     </footer>
   </body>
+  <script>
+    function Menu(e){
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[136px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+  </script>
 </html>
