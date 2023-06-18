@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-left: 4rem;
+            margin-right: 4rem;
+            line-height: 50px;;
+            font-family: sans-serif;
+        }
+        
+        a{
+            text-decoration: none;
+            color: white;
+            background-color: rgb(37 99 253);
+        }
+    </style>
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="dist/index.html">MATH ON</a></li>
-        </ul>
-    </nav>
+<body class="flex just">
+    <main class="flex flex-col">
+        <h1>Clique no nome <a href="dist/index.html" class="text-blue-600 bg-blue-600">MATH ON</a> para ser redirecionado para o projeto</h1>
+    </main>
 </body>
 </html>
