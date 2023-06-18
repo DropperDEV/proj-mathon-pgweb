@@ -53,14 +53,13 @@
     <main class="mb-10 rounded-md mt-44 xl:ml-24 md:p-0 main_content">
         <section class="flex flex-col items-center justify-center p-4 pb-10 mb-10 rounded-md bg-slate-900 w-fit bg-opacity-80">
             <h1 class="font-sans text-5xl font-semibold text-gray-200 xl:-ml-96 sm:mr-96 sm:-ml-40 ">Fatorial</h1>
-            <textarea id="inputFormula" rows="4" cols="50" class="w-48 h-36"></textarea>
-            <button onclick="balance(document.getElementById('inputFormula').value)">Balance</button>
-            <button onclick="random()">Random</button>
+            <textarea id="inputFormula" rows="4" cols="50" class="w-48 h-36" placeholder="Digite uma fórmula"></textarea>
+            <button class="mb-5 text-xl font-semibold text-gray-200 fatorial-resultado" onclick="balance(document.getElementById('inputFormula').value)">Balance</button>
+            <button class="mb-5 text-xl font-semibold text-gray-200 fatorial-resultado" onclick="random()">Random</button>
             <p id="message"></p>
-            <h2>Input:</h2>
             <pre id="codeOutput"></pre>
-            <h2>Output:</h2>
-            <p id="balanced"></p>
+            <h2 class="mb-5 text-xl font-semibold text-gray-200 fatorial-resultado">Output:</h2>
+            <p class="mb-5 text-xl font-semibold text-gray-200 fatorial-resultado" id="balanced"></p>
             <div class="flex flex-col mx-5 space-y-6 text-base font-medium text-gray-100">  
                 <p>O balanceamento de equações químicas é um processo fundamental na química para garantir que a quantidade de átomos de cada elemento seja a mesma em ambos os lados da equação. Isso é importante porque a lei da conservação da massa nos diz que a massa total dos reagentes deve ser igual à massa total dos produtos.</p>
                 <p>O processo de balanceamento envolve a utilização de coeficientes estequiométricos, que são números inteiros colocados antes de cada substância na equação química. Esses coeficientes indicam o número de moléculas (ou átomos) envolvidos na reação e permitem ajustar a proporção entre os reagentes e produtos.</p>
