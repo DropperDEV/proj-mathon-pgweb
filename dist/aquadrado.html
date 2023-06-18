@@ -50,26 +50,25 @@
         <!--NAVBAR MOBILE-->
       </nav>
     </header>
-    <main class="mb-10 rounded-md mt-44 xl:ml-24 md:p-0 main_content">
-        <section class="flex flex-col items-center justify-center p-4 pb-10 mb-10 rounded-md bg-slate-900 w-fit bg-opacity-80">
-            <h1 class="font-sans text-5xl font-semibold text-gray-200 xl:-ml-96 sm:mr-96 sm:-ml-40 ">Fatorial</h1>
-            <div class="mt-10 mb-5">
-                <input type="text" placeholder="Digite um número" class="p-2 rounded-lg">
+    <main class="mb-10 rounded-md mt-44 xl:ml-24 md:p-0 main_content"  id="conteudo">
+        <section class="flex flex-col items-center justify-center p-5 mb-10 -mr-3 rounded-md bg-slate-900 w-fit bg-opacity-80">
+            <h1 class="font-sans text-5xl font-semibold text-gray-200 xl:-ml-96 sm:mr-96 sm:-ml-40 ">Área do Quadrado</h1>
+            <div class="flex flex-col mt-10 mb-5 space-y-10">
+                <input type="text" placeholder="Digite um lado" id="input-lado" class="p-2 rounded-lg">
             </div>
-            <p class="mb-5 text-xl font-semibold text-gray-200 fatorial-resultado" ></p>
-            <button class="p-1 mb-5 bg-red-600 rounded-md h-fit w-fit">Calcular</button>
+            <p class="mb-5 text-xl font-semibold text-gray-200 quadrado-resultado" ></p>
+            <button onclick="calcularArea()" class="p-1 mb-5 bg-red-600 rounded-md h-fit w-fit">Calcular</button>
             
-            <div class="flex flex-col mx-5 space-y-6 text-base font-medium text-gray-100">
-                <p>O fatorial de um número é o produto de todos os números inteiros positivos menores ou iguais a esse número.</p>
-                <p>Por exemplo, o fatorial de 5 é representado como 5! e calculado da seguinte forma:</p>
-                <p>5! = 5 × 4 × 3 × 2 × 1 = 120</p>
-                <p>A fórmula geral para calcular o fatorial de um número inteiro n é:</p>
-                <p>n! = n × (n-1) × (n-2) × ... × 2 × 1</p>
-                <p>Você multiplica o número n por todos os números inteiros positivos menores que n, até chegar a 1.</p>
-                <p>O fatorial de 0 é definido como 1:</p>
-                <p>0! = 1</p>
-                <p>Calculando o fatorial de um número pode ser feito usando um loop, onde você multiplica o número atual pelo produto acumulado dos números anteriores.</p>
-                <p>Espero que isso esclareça o conceito e o cálculo do fatorial!</p>
+            <div class="flex flex-col mx-5 space-y-6 overflow-hidden text-base font-medium text-gray-100">
+                <p>A área de um quadrado é o espaço contido dentro de suas quatro linhas iguais, formando um formato de quatro lados iguais e quatro ângulos retos. A área é uma medida bidimensional e é expressa em unidades quadradas.</p>
+                <p>Para calcular a área de um quadrado, é necessário conhecer o valor de um dos seus lados, pois todos os lados de um quadrado possuem o mesmo comprimento.</p>
+                <p>A fórmula para calcular a área do quadrado é:</p>
+                <p>Área = Lado x Lado</p>
+                <p>Onde "Lado" representa o valor de um dos lados do quadrado.</p>
+                <p>Por exemplo, se conhecemos o valor do lado de um quadrado como 5 unidades, podemos calcular a área da seguinte forma:</p>
+                <p>Área = 5 x 5 = 25 unidades quadradas</p>
+                <p>Assim, a área do quadrado com um lado de 5 unidades é igual a 25 unidades quadradas.</p>
+                <p>A área do quadrado também pode ser interpretada como a quantidade de unidades quadradas necessárias para cobrir completamente a superfície interna do quadrado.</p>
           </div>
         </section>
     </main>
@@ -80,5 +79,5 @@
       </footer>
     </body>
     <script src="../src/assets/js/navbar-mobile.js"></script>
-    <script src="../src/assets/js/fatorial.js"></script>
+    <script src="../src/assets/js/areaquadrado.js"></script>
 </html>
