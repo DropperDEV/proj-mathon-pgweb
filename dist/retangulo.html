@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math On</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body
+    class="w-full h-full bg-no-repeat bg-left bg-fixed bg-cover 2xl:min-h-screen bg-[url('../src/assets/img/planets-2120004.jpg')] flex flex-col items-center justify-center font-sans ">
+    <header class="fixed top-0 left-0 flex w-full p-4 opacity-95 bg-slate-900 h-fit mb-7 xl:mb-16 xl:shadow-2xl">
+      <nav class="container flex justify-between px-4 py-8 mx-auto md:flex md:items-center md:justify-between xl:p-6 ">
+        <a href="index.html"
+          class="flex flex-row items-center justify-center ml-10 font-sans text-2xl cursor-pointer text-gray-50 w-fit ">
+          <img src="../src/assets/img/logo.png" alt="" class="inline w-10 h-10 mr-1" />
+          <h1>MATH ON</h1>
+        </a>
+       <!--NAVBAR DESKTOP-->
+      <nav class="hidden font-sans sm:flex ">
+        <ul class="flex flex-row sm:space-x-9">
+          <li><a href="" class="text-xl text-gray-300 duration-300 ease-in-out border-b border-sky-700 hover:text-gray-100 ">Home</a></li>
+          <li><a href="" class="text-xl text-gray-300 duration-300 ease-in-out border-b border-sky-700 hover:text-gray-100 ">Contato</a></li>
+          <li><a href="" class="text-xl text-gray-300 duration-300 ease-in-out border-b border-sky-700 hover:text-gray-100 ">Sobre</a></li>
+          <li><a href="" class="text-xl text-gray-300 duration-300 ease-in-out border-b border-sky-700 hover:text-gray-100 ">Login</a></li>
+        </ul>
+      </nav>
+      <!--NAVBAR DESKTOP-->
+  
+        
+        <!--NAVBAR MOBILE-->
+        <div 
+          class="absolute inset-y-0 right-0 hidden w-1/3 mt-32 bg-slate-900 rounded-xl h-96 z-5 mobile_navbar md:hidden ">
+          <div class="flex items-center justify-center h-full text-4xl">
+            <ul>
+              <li class="mt-5 text-xl text-gray-200 duration-300 border-b mb-14 border-sky-700"><a
+                  href="index.html">Home</a></li>
+              <li class="text-xl text-gray-200 duration-300 border-b mb-14 border-sky-700"><a href="">Contato</a></li>
+              <li class="text-xl text-gray-200 duration-300 border-b mb-14 border-sky-700"><a href="">Sobre</a></li>
+              <li class="text-xl text-gray-200 duration-300 border-b border-sky-700"><a href="">Login</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="absolute left-0 p-4 space-y-2 inset-y-9 md:hidden hamburger_menu">
+          <span class="block w-8 h-1 bg-white"></span>
+          <span class="block w-8 h-1 bg-white"></span>
+          <span class="block w-8 h-1 bg-white"></span>
+        </div>
+        <!--NAVBAR MOBILE-->
+      </nav>
+    </header>
+    <main class="mb-10 rounded-md mt-44 xl:ml-24 md:p-0 main_content"  id="conteudo">
+        <section class="flex flex-col items-center justify-center p-5 mb-10 -mr-3 rounded-md bg-slate-900 w-fit bg-opacity-80">
+            <h1 class="font-sans text-5xl font-semibold text-gray-200 xl:-ml-96 sm:mr-96 sm:-ml-40 ">Área do Retângulo</h1>
+            <div class="flex flex-col mt-10 mb-5 space-y-10">
+                <input type="text" placeholder="Digite um lado x" id="input-lado-x" class="p-2 rounded-lg">
+                <input type="text" placeholder="Digite um lado y" id="input-lado-y" class="p-2 rounded-lg">
+            </div>
+            <p class="mb-5 text-xl font-semibold text-gray-200 quadrado-resultado" ></p>
+            <button onclick="calcularArea()" class="p-1 mb-5 bg-red-600 rounded-md h-fit w-fit">Calcular</button>
+            
+            <div class="flex flex-col mx-5 space-y-6 overflow-hidden text-base font-medium text-gray-100">
+                <p>A área de um retângulo é uma medida que indica a quantidade de espaço ocupado pela figura no plano bidimensional. Em outras palavras, a área representa a superfície interna do retângulo, medida em unidades quadradas.</p>
+                <p>Para calcular a área de um retângulo, utilizamos a fórmula: Área = Base x Altura. A base é o lado mais longo do retângulo, enquanto a altura é o lado mais curto. Multiplicando esses dois valores, obtemos a área total.</p>
+                <p>Por exemplo, suponhamos que tenhamos um retângulo com uma base de 8 metros e uma altura de 5 metros. Para calcular a área desse retângulo, multiplicamos 8 metros pela altura de 5 metros:</p>
+                <p>Área = 8 metros x 5 metros = 40 metros quadrados</p>
+                <p>Portanto, a área desse retângulo é de 40 metros quadrados, indicando que ele ocupa 40 unidades de superfície no plano.</p>
+                <p>A área do retângulo é uma medida importante em várias áreas, como a geometria, a arquitetura e a engenharia. Entender como calcular a área de um retângulo nos permite determinar o espaço ocupado por objetos retangulares e auxilia no planejamento e dimensionamento de construções e projetos.</p>
+                <p>Em resumo, para calcular a área de um retângulo, basta multiplicar a base pela altura. A área resultante é expressa em unidades quadradas e representa o espaço ocupado pela figura no plano bidimensional.</p>
+          </div>
+        </section>
+    </main>
+    <footer class="w-full sm:h-16 sm:bottom-0 sm:fixed">
+        <div class="flex items-center justify-center w-full h-16 bg-slate-900">
+          <h3 class="text-gray-200">Todos os direitos reservados.</h3>
+        </div>
+      </footer>
+    </body>
+    <script src="../src/assets/js/navbar-mobile.js"></script>
+    <script src="../src/assets/js/areaquadrado.js"></script>
+    <script src="../src/assets/js/retangulo.js"></script>
+</html>
