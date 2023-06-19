@@ -971,6 +971,10 @@ video {
     margin-right: 24rem;
   }
 
+  .sm\:-ml-20 {
+    margin-left: -5rem;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -1032,6 +1036,14 @@ video {
 
   .xl\:mt-24 {
     margin-top: 6rem;
+  }
+
+  .xl\:-ml-60 {
+    margin-left: -15rem;
+  }
+
+  .xl\:-ml-44 {
+    margin-left: -11rem;
   }
 
   .xl\:flex {

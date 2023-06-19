@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math On</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="w-full h-full bg-no-repeat bg-left bg-fixed bg-cover 2xl:min-h-screen bg-[url('../src/assets/img/planets-2120004.jpg')] flex flex-col items-center justify-center font-sans">
+    <header class="fixed top-0 left-0 flex w-full p-4 opacity-95 bg-slate-900 h-fit mb-7 xl:mb-16 xl:shadow-2xl">
+      <nav class="container flex justify-between px-4 py-8 mx-auto md:flex md:items-center md:justify-between xl:p-6">
+        <a href="index.html" class="flex flex-row items-center justify-center ml-10 font-sans text-2xl cursor-pointer text-gray-50 w-fit">
+          <img src="../src/assets/img/logo.png" alt="" class="inline w-10 h-10 mr-1" />
+          <h1>MATH ON</h1>
+        </a>
+        <!--NAVBAR DESKTOP-->
+        <nav class="hidden font-sans sm:flex">
+          <ul class="flex flex-row sm:space-x-9">
+            <li><a href="index.html" class="text-xl text-gray-300 duration-300 ease-in-out border-b border-sky-700 hover:text-gray-100">Home</a></li>
+            <li><a href="" class="text-xl text-gray-300 duration-300 ease-in-out border-b border-sky-700 hover:text-gray-100">Contato</a></li>
+            <li><a href="" class="text-xl text-gray-300 duration-300 ease-in-out border-b border-sky-700 hover:text-gray-100">Sobre</a></li>
+            <li><a href="" class="text-xl text-gray-300 duration-300 ease-in-out border-b border-sky-700 hover:text-gray-100">Login</a></li>
+          </ul>
+        </nav>
+        <!--NAVBAR DESKTOP-->
+
+        <!--NAVBAR MOBILE-->
+        <div class="absolute inset-y-0 right-0 hidden w-1/3 mt-32 bg-slate-900 rounded-xl h-96 z-5 mobile_navbar md:hidden">
+          <div class="flex items-center justify-center h-full text-4xl">
+            <ul>
+              <li class="mt-5 text-xl text-gray-200 duration-300 border-b mb-14 border-sky-700"><a href="index.html">Home</a></li>
+              <li class="text-xl text-gray-200 duration-300 border-b mb-14 border-sky-700"><a href="">Contato</a></li>
+              <li class="text-xl text-gray-200 duration-300 border-b mb-14 border-sky-700"><a href="">Sobre</a></li>
+              <li class="text-xl text-gray-200 duration-300 border-b border-sky-700"><a href="">Login</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="absolute left-0 p-4 space-y-2 inset-y-9 md:hidden hamburger_menu">
+          <span class="block w-8 h-1 bg-white"></span>
+          <span class="block w-8 h-1 bg-white"></span>
+          <span class="block w-8 h-1 bg-white"></span>
+        </div>
+        <!--NAVBAR MOBILE-->
+      </nav>
+    </header>
+    <main class="mb-10 rounded-md mt-44 xl:ml-24 md:p-0 main_content">
+        <section class="flex flex-col items-center justify-center p-4 pb-10 mb-10 rounded-md bg-slate-900 w-fit bg-opacity-80">
+            <h1 class="font-sans text-5xl font-semibold text-gray-200 xl:-ml-96 sm:mr-96 sm:-ml-40">Conversão de Dias</h1>
+            <div class="mt-10 mb-5">
+              <input type="text" id="diasInput" placeholder="Digite um número" class="p-2 rounded-lg">
+            </div>
+            <p class="mb-5 text-xl font-semibold text-gray-200 resultado"></p>
+            <button onclick="calcular()" class="p-1 mb-5 bg-red-600 rounded-md h-fit w-fit">Calcular</button>
+    
+            <div class="flex flex-col mx-5 space-y-6 text-base font-medium text-gray-100">
+                <p>Para converter um número de dias em anos, meses e dias, podemos seguir os seguintes passos:</p>
+                <p>Dividimos o número de dias pelo total de dias em um ano (365).</p>
+                <p>O resultado dessa divisão será a quantidade de anos completos.</p>
+                <p>Em seguida, pegamos o restante da divisão (o número de dias não cobertos pelos anos completos) e dividimos pelo total de dias em um mês (30).</p>
+                <p>O resultado dessa segunda divisão será a quantidade de meses completos.</p>
+                <p>Por fim, o restante dessa segunda divisão serão os dias.</p>
+                <p>Por exemplo, se tivermos um número total de 500 dias, o cálculo ficaria da seguinte forma:</p>
+                <p>Passo 1: 500 dias ÷ 365 dias/ano = 1 ano (365 dias completos)</p>
+                <p>Passo 2: 500 dias % 365 dias/ano = 135 dias restantes</p>
+                <p>Passo 3: 135 dias ÷ 30 dias/mês = 4 meses (120 dias completos)</p>
+                <p>Passo 4: 135 dias % 30 dias/mês = 15 dias restantes</p>
+                <p>Portanto, 500 dias equivalem a 1 ano, 4 meses e 15 dias.</p>
+            </div>
+          </section>
+    </main>
+    <footer class="w-full sm:h-16 sm:bottom-0 sm:fixed">
+      <div class="flex items-center justify-center w-full h-16 bg-slate-900">
+        <h3 class="text-gray-200">Todos os direitos reservados.</h3>
+      </div>
+    </footer>
+  </body>
+  <script src="../src/assets/js/navbar-mobile.js"></script>
+    <script src="../src/assets/js/conversãodia.js"></script>
+</html>
