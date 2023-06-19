@@ -1,44 +1,104 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Tradutor de Texto para Binário e Binário para Texto</title>
-</head>
-<body>
-  <h1>Tradutor de Texto para Binário e Binário para Texto</h1>
-  <textarea id="input" placeholder="Insira o texto ou código binário aqui"></textarea>
-  <br>
-  <button onclick="translateToBinary()">Traduzir para Binário</button>
-  <button onclick="translateToText()">Traduzir para Texto</button>
-  <br>
-  <textarea id="output" placeholder="Resultado"></textarea>
-</body>
-<script>
-  function translateToBinary() {
-    const inputText = document.getElementById('input').value;
-    let binaryCode = '';
-
-    for (let i = 0; i < inputText.length; i++) {
-      const charCode = inputText.charCodeAt(i);
-      const binary = charCode.toString(2);
-      binaryCode += binary.padStart(8, '0') + ' ';
-    }
-
-    document.getElementById('output').value = binaryCode.trim();
-  }
-
-  function translateToText() {
-    const inputBinary = document.getElementById('input').value;
-    const binaryArray = inputBinary.split(' ');
-    let text = '';
-
-    for (let i = 0; i < binaryArray.length; i++) {
-      const binary = binaryArray[i];
-      const charCode = parseInt(binary, 2);
-      const char = String.fromCharCode(charCode);
-      text += char;
-    }
-
-    document.getElementById('output').value = text;
-  }
-</script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math On</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body
+    class="w-full h-full bg-no-repeat bg-left bg-fixed bg-cover 2xl:min-h-screen bg-[url('../src/assets/img/planets-2120004.jpg')] flex flex-col items-center justify-center font-sans ">
+    <header class="fixed top-0 left-0 flex w-full p-4 opacity-95 bg-slate-900 h-fit mb-7 xl:mb-16 xl:shadow-2xl">
+      <nav class="container flex justify-between px-4 py-8 mx-auto md:flex md:items-center md:justify-between xl:p-6 ">
+        <a href="index.html"
+          class="flex flex-row items-center justify-center ml-10 font-sans text-2xl cursor-pointer text-gray-50 w-fit ">
+          <img src="../src/assets/img/logo.png" alt="" class="inline w-10 h-10 mr-1" />
+          <h1>MATH ON</h1>
+        </a>
+       <!--NAVBAR DESKTOP-->
+      <nav class="hidden font-sans sm:flex ">
+        <ul class="flex flex-row sm:space-x-9">
+          <li><a href="index.html" class="text-xl text-gray-300 duration-300 ease-in-out border-b border-sky-700 hover:text-gray-100 ">Home</a></li>
+          <li><a href="" class="text-xl text-gray-300 duration-300 ease-in-out border-b border-sky-700 hover:text-gray-100 ">Contato</a></li>
+          <li><a href="" class="text-xl text-gray-300 duration-300 ease-in-out border-b border-sky-700 hover:text-gray-100 ">Sobre</a></li>
+          <li><a href="" class="text-xl text-gray-300 duration-300 ease-in-out border-b border-sky-700 hover:text-gray-100 ">Login</a></li>
+        </ul>
+      </nav>
+      <!--NAVBAR DESKTOP-->
+  
+        
+        <!--NAVBAR MOBILE-->
+        <div 
+          class="absolute inset-y-0 right-0 hidden w-1/3 mt-32 bg-slate-900 rounded-xl h-96 z-5 mobile_navbar md:hidden ">
+          <div class="flex items-center justify-center h-full text-4xl">
+            <ul>
+              <li class="mt-5 text-xl text-gray-200 duration-300 border-b mb-14 border-sky-700"><a
+                  href="index.html">Home</a></li>
+              <li class="text-xl text-gray-200 duration-300 border-b mb-14 border-sky-700"><a href="">Contato</a></li>
+              <li class="text-xl text-gray-200 duration-300 border-b mb-14 border-sky-700"><a href="">Sobre</a></li>
+              <li class="text-xl text-gray-200 duration-300 border-b border-sky-700"><a href="">Login</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="absolute left-0 p-4 space-y-2 inset-y-9 md:hidden hamburger_menu">
+          <span class="block w-8 h-1 bg-white"></span>
+          <span class="block w-8 h-1 bg-white"></span>
+          <span class="block w-8 h-1 bg-white"></span>
+        </div>
+        <!--NAVBAR MOBILE-->
+      </nav>
+    </header>
+    <main class="mb-10 rounded-md mt-44 xl:ml-24 md:p-0 main_content">
+        <section class="flex flex-col items-center justify-center p-4 pb-10 mb-10 rounded-md bg-slate-900 w-fit bg-opacity-80">
+            <h1 class="py-4 font-sans text-5xl font-semibold text-gray-200 xl:-ml-96 sm:mr-96 sm:-ml-40 ">Tradutor de binário</h1>
+            <div class="flex flex-row flex-wrap mb-10 space-x-8 text-gray-200 space-y-7 ">
+                <textarea id="input" placeholder="Insira o texto ou código binário aqui"></textarea>
+                <textarea id="output" placeholder="Resultado" readonly></textarea>
+                <div class="flex flex-row space-x-4">
+                    <button onclick="translateToBinary()" class="p-1 mb-5 text-gray-200 bg-red-600 rounded-md h-fit w-fit">Traduzir para Binário</button>
+                    <butto onclick="translateToText()" class="p-1 mb-5 text-gray-200 bg-red-600 rounded-md h-fit w-fit">Traduzir para Texto</butto>
+                </div>
+           </div>
+            
+            <div class="flex flex-col mx-5 space-y-6 text-base font-medium text-gray-100">
+                <p>A tradução de binário em texto envolve a conversão de sequências de 0s e 1s, que representam valores binários, em caracteres de texto.</p>
+                <p>Cada caractere de texto tem uma representação numérica associada, conhecida como seu código de caractere.</p>
+                <p>No processo de tradução de binário em texto, agrupamos os valores binários em conjuntos de 8 dígitos, chamados de bytes. Cada byte representa um caractere.</p>
+                <p>Para converter um byte binário em um caractere de texto, usamos a tabela ASCII (American Standard Code for Information Interchange) que mapeia os valores numéricos para caracteres específicos.</p>
+                <p>Calculamos o valor decimal do byte binário e, em seguida, encontramos o caractere correspondente na tabela ASCII. Esse processo é repetido para cada byte até traduzir toda a sequência binária em texto.</p>
+                <p>Assim, a tradução de binário em texto permite que representações binárias sejam convertidas em mensagens legíveis e compreensíveis.</p>
+                
+                <h2>Explicação da Conversão de Números Decimais em Binários</h2>
+                <p>A conversão de números decimais em binários envolve a representação de valores numéricos na base 2, utilizando apenas os dígitos 0 e 1.</p>
+                <p>Para converter um número decimal em binário, dividimos sucessivamente o número por 2 e registramos o resto de cada divisão. Os restos formam a sequência binária, lida de trás para frente.</p>
+                <p>Esse processo é repetido até que o número decimal seja igual a zero.</p>
+                <p>Por exemplo, para converter o número decimal 10 em binário, fazemos:</p>
+                <p>10 ÷ 2 = 5 (resto 0)</p>
+                <p>5 ÷ 2 = 2 (resto 1)</p>
+                <p>2 ÷ 2 = 1 (resto 0)</p>
+                <p> ÷ 2 = 0 (resto 1)</p>
+                <p>Os restos obtidos na sequência são 0101, que é o número binário equivalente a 10 em decimal.</p>
+              </div>              
+        </section>
+    </main>
+     <footer class="w-full sm:h-16 sm:bottom-0 sm:fixed">
+        <div class="flex items-center justify-center w-full h-16 bg-slate-900">
+          <h3 class="text-gray-200">Todos os direitos reservados.</h3>
+        </div>
+      </footer>
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    </body>
+    <script src="../src/assets/js/navbar-mobile.js"></script>
+    <script src="../src/assets/js/gerarsenha.js"></script>
 </html>
