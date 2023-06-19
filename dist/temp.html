@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gerador de Senha</title>
+</head>
+<body>
+  <h1>Gerador de Senha</h1>
+  <label for="comprimento">Comprimento da Senha:</label>
+  <input type="number" id="comprimento" min="1" max="50" value="8">
+  <br>
+  <label for="incluirLetrasMaiusculas">
+    <input type="checkbox" id="incluirLetrasMaiusculas" checked>
+    Incluir Letras Maiúsculas
+  </label>
+  <br>
+  <label for="incluirLetrasMinusculas">
+    <input type="checkbox" id="incluirLetrasMinusculas" checked>
+    Incluir Letras Minúsculas
+  </label>
+  <br>
+  <label for="incluirNumeros">
+    <input type="checkbox" id="incluirNumeros" checked>
+    Incluir Números
+  </label>
+  <br>
+  <label for="incluirSimbolos">
+    <input type="checkbox" id="incluirSimbolos">
+    Incluir Símbolos
+  </label>
+  <br>
+  <button onclick="gerarSenha()">Gerar Senha</button>
+  <br>
+  <input type="text" id="senhaGerada" readonly>
+</body>
+<script>
+    function gerarSenha() {
+      var caracteres = '';
+      var comprimento = parseInt(document.getElementById('comprimento').value);
+      var incluirLetrasMaiusculas = document.getElementById('incluirLetrasMaiusculas').checked;
+      var incluirLetrasMinusculas = document.getElementById('incluirLetrasMinusculas').checked;
+      var incluirNumeros = document.getElementById('incluirNumeros').checked;
+      var incluirSimbolos = document.getElementById('incluirSimbolos').checked;
+
+      if (incluirLetrasMaiusculas) {
+        caracteres += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      }
+      if (incluirLetrasMinusculas) {
+        caracteres += 'abcdefghijklmnopqrstuvwxyz';
+      }
+      if (incluirNumeros) {
+        caracteres += '0123456789';
+      }
+      if (incluirSimbolos) {
+        caracteres += '!@#$%^&*()_+~`|}{[]\:;?><,./-='; 
+      }
+
+      var senha = '';
+      for (var i = 0; i < comprimento; i++) {
+        senha += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+      }
+
+      document.getElementById('senhaGerada').value = senha;
+    }
+  </script>
+</html>

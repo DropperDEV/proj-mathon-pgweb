@@ -52,10 +52,12 @@
     </header>
     <main class="mb-10 rounded-md mt-44 xl:ml-24 md:p-0 main_content">
         <section class="flex flex-col items-center justify-center p-4 pb-10 mb-10 rounded-md bg-slate-900 w-fit bg-opacity-80">
-            <h1 class="py-4 font-sans text-5xl font-semibold text-gray-200 xl:-ml-96 sm:mr-96 sm:-ml-40 ">Tradutor de binário</h1>
-            <div class="flex flex-row flex-wrap mb-10 space-x-8 text-gray-200 space-y-7 ">
-                <textarea id="input" placeholder="Insira o texto ou código binário aqui"></textarea>
-                <textarea id="output" placeholder="Resultado" readonly></textarea>
+            <h1 class="py-4 font-sans text-5xl font-semibold text-gray-200 xl:-ml-96 sm:mr-96 sm:-ml-40 md:ml-10 ">Tradutor de binário</h1>
+            <div class="flex flex-col mb-10 space-x-8 text-gray-200 space-y-7 sm:mt-10 ">
+                <div class="flex flex-col items-center justify-center space-y-7 text-slate-950">
+                  <textarea id="input" placeholder="Insira o texto ou código binário aqui" class="w-56 rounded-lg h-36"></textarea>
+                  <textarea id="output" placeholder="Resultado" readonly class="w-56 rounded-lg h-36"></textarea>
+                </div>
                 <div class="flex flex-row space-x-4">
                     <button onclick="translateToBinary()" class="p-1 mb-5 text-gray-200 bg-red-600 rounded-md h-fit w-fit">Traduzir para Binário</button>
                     <butto onclick="translateToText()" class="p-1 mb-5 text-gray-200 bg-red-600 rounded-md h-fit w-fit">Traduzir para Texto</butto>
@@ -101,4 +103,5 @@
     </body>
     <script src="../src/assets/js/navbar-mobile.js"></script>
     <script src="../src/assets/js/gerarsenha.js"></script>
+    <script src="../src/assets/js/trabinario.js"></script>
 </html>
