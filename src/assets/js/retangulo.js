@@ -11,7 +11,7 @@ function calcularArea() {
         var area = ladoX * ladoY;
 
         // Exibir o resultado
-        var resultadoElement = document.querySelector('.quadrado-resultado');
+        var resultadoElement = document.querySelector('.retangulo-resultado');
         resultadoElement.textContent = "A área do retângulo é: " + area;
     }
 }

@@ -54,11 +54,11 @@
         <section class="flex flex-col items-center justify-center p-4 pb-10 mb-10 rounded-md bg-slate-900 w-fit bg-opacity-80">
             <h1 class="font-sans text-5xl font-semibold text-gray-200 xl:-ml-96 sm:mr-96 sm:-ml-40">Fatorial</h1>
             <textarea id="inputFormula" rows="4" cols="50" class="w-48 mt-10 mb-5 h-36 md:w-fit" placeholder="Digite uma fórmula"></textarea>
-            <div class="flex flex-row space-x-7">
-              <button class="mb-5 text-xl font-semibold text-gray-200 border fatorial-resultado" onclick="balance(document.getElementById('inputFormula').value)">Calcular</button>
-              <button class="mb-5 text-xl font-semibold text-gray-200 fatorial-resultado" onclick="random()">Randômico</button>
+            <div class="flex flex-row mt-5 space-x-7">
+              <button class="mb-5 text-xl font-semibold text-gray-200 border " onclick="balance(document.getElementById('inputFormula').value)">Calcular</button>
+              <button class="mb-5 text-xl font-semibold text-gray-200 border " onclick="random()">Randômico</button>
             </div>
-            <p id="message"></p>
+            <p id="message" class="mb-5 text-xl font-semibold text-gray-200 fatorial-resultado"></p>
             <pre id="codeOutput"></pre>
             <h2 class="mb-5 text-xl font-semibold text-gray-200 fatorial-resultado">Output:</h2>
             <p class="mb-5 text-xl font-semibold text-gray-200 fatorial-resultado" id="balanced"></p>

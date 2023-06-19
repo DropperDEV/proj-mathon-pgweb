@@ -758,6 +758,12 @@ video {
   justify-content: space-between;
 }
 
+.space-x-7 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -774,12 +780,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-
-.space-x-7 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1.75rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-hidden {
@@ -983,11 +983,6 @@ video {
     width: 100%;
   }
 
-  .sm\:w-fit {
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-
   .sm\:space-x-9 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(2.25rem * var(--tw-space-x-reverse));
@@ -1041,11 +1036,6 @@ video {
 
   .xl\:flex {
     display: flex;
-  }
-
-  .xl\:w-fit {
-    width: -moz-fit-content;
-    width: fit-content;
   }
 
   .xl\:p-6 {
