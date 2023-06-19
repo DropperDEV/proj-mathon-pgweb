@@ -50,7 +50,7 @@
               <input type="text" id="diasInput" placeholder="Digite um número" class="p-2 rounded-lg">
             </div>
             <p class="mb-5 text-xl font-semibold text-gray-200 resultado"></p>
-            <button onclick="calcular()" class="p-1 mb-5 bg-red-600 rounded-md h-fit w-fit">Calcular</button>
+            <button onclick="calcular()" class="p-1 mb-5 text-gray-200 bg-red-600 rounded-md h-fit w-fit">Calcular</button>
     
             <div class="flex flex-col mx-5 space-y-6 text-base font-medium text-gray-100">
                 <p>Para converter um número de dias em anos, meses e dias, podemos seguir os seguintes passos:</p>
@@ -73,6 +73,16 @@
         <h3 class="text-gray-200">Todos os direitos reservados.</h3>
       </div>
     </footer>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
   </body>
   <script src="../src/assets/js/navbar-mobile.js"></script>
     <script src="../src/assets/js/conversãodia.js"></script>

@@ -55,13 +55,13 @@
             <h1 class="font-sans text-5xl font-semibold text-gray-200 sm:mr-96 sm:-ml-90">Balanceamento de equações químicas</h1>
             <textarea id="inputFormula" rows="4" cols="50" class="w-48 mt-10 mb-5 h-36 md:w-fit" placeholder="Digite uma fórmula"></textarea>
             <div class="flex flex-row mt-5 space-x-7">
-              <button class="mb-5 text-xl font-semibold text-gray-200 border " onclick="balance(document.getElementById('inputFormula').value)">Calcular</button>
-              <button class="mb-5 text-xl font-semibold text-gray-200 border " onclick="random()">Randômico</button>
+              <button class="p-1 mb-5 text-gray-200 bg-red-600 rounded-md h-fit w-fit" onclick="balance(document.getElementById('inputFormula').value)">Calcular</button>
+              <button class="p-1 mb-5 text-gray-200 bg-red-600 rounded-md h-fit w-fit" onclick="random()">Randômico</button>
             </div>
-            <p id="message" class="mb-5 text-xl font-semibold text-gray-200 fatorial-resultado"></p>
+            <p id="message" class="mb-5 text-xl font-semibold text-gray-200"></p>
             <pre id="codeOutput"></pre>
-            <h2 class="mb-5 text-xl font-semibold text-gray-200 fatorial-resultado">Output:</h2>
-            <p class="mb-5 text-xl font-semibold text-gray-200 fatorial-resultado" id="balanced"></p>
+            <h2 class="mb-5 text-xl font-semibold text-gray-200">Saída:</h2>
+            <p class="mb-5 text-xl font-semibold text-gray-200" id="balanced"></p>
             <div class="flex flex-col mx-5 space-y-6 text-base font-medium text-gray-100">  
                 <p>O balanceamento de equações químicas é um processo fundamental na química para garantir que a quantidade de átomos de cada elemento seja a mesma em ambos os lados da equação. Isso é importante porque a lei da conservação da massa nos diz que a massa total dos reagentes deve ser igual à massa total dos produtos.</p>
                 <p>O processo de balanceamento envolve a utilização de coeficientes estequiométricos, que são números inteiros colocados antes de cada substância na equação química. Esses coeficientes indicam o número de moléculas (ou átomos) envolvidos na reação e permitem ajustar a proporção entre os reagentes e produtos.</p>
@@ -78,11 +78,21 @@
             </div>
         </section>
     </main>
-    <footer class="w-full sm:h-16 sm:bottom-0 sm:fixed">
+     <footer class="w-full sm:h-16 sm:bottom-0 sm:fixed">
         <div class="flex items-center justify-center w-full h-16 bg-slate-900">
           <h3 class="text-gray-200">Todos os direitos reservados.</h3>
         </div>
       </footer>
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
     </body>
     <script src="../src/assets/js/navbar-mobile.js"></script>
     <script src="../src/assets/js/fatorial.js"></script>

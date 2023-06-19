@@ -52,13 +52,13 @@
     </header>
     <main class="mb-10 rounded-md mt-44 xl:ml-24 md:p-0 main_content"  id="conteudo">
         <section class="flex flex-col items-center justify-center p-5 mb-10 -mr-3 rounded-md bg-slate-900 w-fit bg-opacity-80">
-            <h1 class="font-sans text-5xl font-semibold text-gray-200 xl:-ml-96 sm:mr-96 sm:-ml-40 ">Área do Retângulo</h1>
+            <h1 class="font-sans text-5xl font-semibold text-gray-200 xl:-ml-96 sm:-ml-72 ">Área do Retângulo</h1>
             <div class="flex flex-col mt-10 mb-5 space-y-10">
                 <input type="text" placeholder="Digite um lado x" id="input-lado-x" class="p-2 rounded-lg">
                 <input type="text" placeholder="Digite um lado y" id="input-lado-y" class="p-2 rounded-lg">
             </div>
             <p class="mb-5 text-xl font-semibold text-gray-200 retangulo-resultado" ></p>
-            <button onclick="calcularArea()" class="p-1 mb-5 bg-red-600 rounded-md h-fit w-fit">Calcular</button>
+            <button onclick="calcularArea()" class="p-1 mb-5 text-gray-200 bg-red-600 rounded-md h-fit w-fit">Calcular</button>
             
             <div class="flex flex-col mx-5 space-y-6 overflow-hidden text-base font-medium text-gray-100">
                 <p>A área de um retângulo é uma medida que indica a quantidade de espaço ocupado pela figura no plano bidimensional. Em outras palavras, a área representa a superfície interna do retângulo, medida em unidades quadradas.</p>
@@ -71,11 +71,21 @@
           </div>
         </section>
     </main>
-    <footer class="w-full sm:h-16 sm:bottom-0 sm:fixed">
+      <footer class="w-full sm:h-16 sm:bottom-0 sm:fixed">
         <div class="flex items-center justify-center w-full h-16 bg-slate-900">
           <h3 class="text-gray-200">Todos os direitos reservados.</h3>
         </div>
       </footer>
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
     </body>
     <script src="../src/assets/js/navbar-mobile.js"></script>
     <script src="../src/assets/js/areaquadrado.js"></script>

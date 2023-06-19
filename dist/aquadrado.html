@@ -57,7 +57,7 @@
                 <input type="text" placeholder="Digite um lado" id="input-lado" class="p-2 rounded-lg">
             </div>
             <p class="mb-5 text-xl font-semibold text-gray-200 quadrado-resultado" ></p>
-            <button onclick="calcularArea()" class="p-1 mb-5 bg-red-600 rounded-md h-fit w-fit">Calcular</button>
+            <button onclick="calcularArea()" class="p-1 mb-5 text-gray-200 bg-red-600 rounded-md h-fit w-fit">Calcular</button>
             
             <div class="flex flex-col mx-5 space-y-6 overflow-hidden text-base font-medium text-gray-100">
                 <p>A área de um quadrado é o espaço contido dentro de suas quatro linhas iguais, formando um formato de quatro lados iguais e quatro ângulos retos. A área é uma medida bidimensional e é expressa em unidades quadradas.</p>
@@ -72,11 +72,21 @@
           </div>
         </section>
     </main>
-    <footer class="w-full sm:h-16 sm:bottom-0 sm:fixed">
+      <footer class="w-full sm:h-16 sm:bottom-0 sm:fixed">
         <div class="flex items-center justify-center w-full h-16 bg-slate-900">
           <h3 class="text-gray-200">Todos os direitos reservados.</h3>
         </div>
       </footer>
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
     </body>
     <script src="../src/assets/js/navbar-mobile.js"></script>
     <script src="../src/assets/js/areaquadrado.js"></script>
