@@ -51,51 +51,47 @@
       </nav>
     </header>
     <main class="mb-10 rounded-md mt-44 xl:ml-24 md:p-0 main_content">
-        <section class="flex flex-col items-center justify-center p-4 pb-10 mb-10 rounded-md bg-slate-900 w-fit bg-opacity-80">
-            <h1 class="py-4 font-sans text-5xl font-semibold text-gray-200 xl:-ml-96 sm:mr-32 sm:-ml-60 ">Gerador de Senha</h1>
-            <div class="flex flex-col flex-wrap mb-10 space-x-8 text-gray-200 space-y-7 ">
-                <div class="flex flex-row items-center justify-center mb-2 space-x-7">
-                    <label for="comprimento"  class="sm:ml-8">Comprimento da Senha:</label>
-                    <input type="number" id="comprimento" min="1" max="50" value="8" class="rounded-sm text-gray-950">
-                </div>
-                <nav class="grid grid-cols-2 grid-rows-1 gap-12">
-                    <label for="incluirLetrasMaiusculas" >
-                    <input type="checkbox" id="incluirLetrasMaiusculas" checked>
-                    Incluir Letras Maiúsculas
-                    </label>
-                    <label for="incluirLetrasMinusculas">
-                        <input type="checkbox" id="incluirLetrasMinusculas" checked>
-                        Incluir Letras Minúsculas
-                    </label>
-                    <label for="incluirNumeros">
-                        <input type="checkbox" id="incluirNumeros" checked>
-                        Incluir Números
-                    </label>
-                    <label for="incluirSimbolos">
-                        <input type="checkbox" id="incluirSimbolos">
-                        Incluir Símbolos
-                    </label>
-                </nav>
-                <div class="flex flex-row space-x-6">
-                  <button onclick="gerarSenha()" class="p-1 mb-5 bg-red-600 rounded-md h-fit w-fit">Gerar Senha</button>
-                  <input type="text" id="senhaGerada" readonly class="rounded-lg text-gray-950">
-                </div>
+        <section class="flex flex-col items-center justify-center p-4 pb-10 mb-10 text-gray-200 rounded-md bg-slate-900 w-fit bg-opacity-80">
+            <h1 class="py-4 font-sans text-5xl font-semibold text-gray-200 xl:-ml-96  sm:-ml-40 ">Converter Comprimento</h1>
+            <div class="flex flex-col space-y-4 mb-5">
+  
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" step="any" required class="rounded-sm text-gray-950">
+                
+                <label for="unidadeEntrada">Unidade de Entrada:</label>
+                <select id="unidadeEntrada" class="rounded-sm text-gray-950">
+                    <option value="metro">Metro</option>
+                    <option value="centimetro">Centímetro</option>
+                    <option value="milimetro">Milímetro</option>
+                </select>
+                
+                <label for="unidadeSaida">Unidade de Saída:</label>
+                <select id="unidadeSaida" class="rounded-sm text-gray-950">
+                    <option value="metro">Metro</option>
+                    <option value="centimetro">Centímetro</option>
+                    <option value="milimetro">Milímetro</option>
+                </select>
+            </div>
+              <button onclick="converterComprimento()" class="p-1  bg-red-600 rounded-md h-fit w-fit mb-5">Converter</button>
+              
+              <p id="resultado" class="mb-5"></p>
+            </div>
+            
            </div>
             
             <div class="flex flex-col mx-5 space-y-6 text-base font-medium text-gray-100">
-                <p>A geração de senhas é um processo que cria combinações aleatórias de caracteres para criar uma sequência de senha segura.</p>
-                <p>Este gerador de senha permite personalizar o comprimento da senha e escolher quais tipos de caracteres incluir.</p>
-                <p>A senha gerada é construída selecionando aleatoriamente caracteres do conjunto escolhido.</p>
-                <p>Aqui está como funciona:</p>
-                <p>1. O comprimento da senha é especificado no campo "Comprimento da Senha". Recomenda-se escolher um comprimento de senha com pelo menos 8 caracteres para garantir a segurança.</p>
-                <p>2. As opções "Incluir Letras Maiúsculas", "Incluir Letras Minúsculas", "Incluir Números" e "Incluir Símbolos" determinam quais tipos de caracteres serão incluídos na senha. Quanto mais tipos de caracteres forem selecionados, mais forte será a senha.</p>
-                <p>3. Com base nas opções selecionadas, o gerador de senha cria uma sequência aleatória de caracteres que atende ao comprimento especificado.</p>
-                <p>4. A senha gerada é exibida no campo de texto abaixo do botão "Gerar Senha". Você pode copiar a senha gerada e usá-la para proteger suas contas online.</p>
-                <p>5. Lembre-se de que é importante escolher senhas fortes e únicas para proteger suas contas e informações pessoais. Evite usar informações pessoais óbvias ou sequências comuns.</p>
-                <p>6. Recomenda-se usar uma combinação de letras maiúsculas e minúsculas, números e símbolos para aumentar a complexidade da senha.</p>
-                <p>7. É altamente recomendável usar senhas diferentes para cada uma de suas contas online para evitar que uma violação de segurança em uma conta comprometa todas as outras.</p>
-                <p>8. Considere o uso de um gerenciador de senhas confiável para armazenar e gerenciar suas senhas de forma segura.</p>
-                <p>Mantenha suas senhas protegidas e atualize-as regularmente para garantir a segurança online!</p>
+              <p>A conversão de comprimento é um processo que permite converter medidas de uma unidade para outra.</p>
+              <p>Este conversor de comprimento permite que você escolha a unidade de entrada e a unidade de saída para realizar a conversão.</p>
+              <p>O valor inserido será multiplicado por um fator de conversão, determinado com base nas unidades selecionadas.</p>
+              <p>Aqui está como funciona:</p>
+              <p>O valor a ser convertido é inserido no campo "Valor". Certifique-se de digitar um número válido.</p>
+              <p>A unidade de entrada é selecionada no campo "Unidade de Entrada". Escolha a unidade correspondente à medida original.</p>
+              <p>A unidade de saída é selecionada no campo "Unidade de Saída". Escolha a unidade desejada para a conversão.</p>
+              <p>Com base nas unidades selecionadas, o conversor de comprimento aplica o fator de conversão adequado para obter o resultado.</p>
+              <p>O resultado da conversão é exibido na área abaixo do botão "Converter".</p>
+              <p>Lembre-se de que existem diferentes fatores de conversão para cada unidade de comprimento. Certifique-se de selecionar as unidades corretas para obter resultados precisos.</p>
+              <p>Você pode realizar várias conversões alterando os valores e as unidades de entrada e saída.</p>
+          </div>
               </div>              
         </section>
     </main>
@@ -117,4 +113,5 @@
     </body>
     <script src="../src/assets/js/navbar-mobile.js"></script>
     <script src="../src/assets/js/gerarsenha.js"></script>
+    <script src="../src/assets/js/convertercomprimento.js"></script>
 </html>
