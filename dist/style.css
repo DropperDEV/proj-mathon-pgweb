@@ -556,10 +556,6 @@ video {
   }
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 .fixed {
   position: fixed;
 }
@@ -822,6 +818,12 @@ video {
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -832,30 +834,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
-}
-
-.space-x-5 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-y-5 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
-}
-
-.space-y-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
-}
-
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -906,8 +884,16 @@ video {
   --tw-bg-opacity: 0.8;
 }
 
+.bg-\[url\(\'\.\.\/src\/assets\/img\/planet-webp\.webp\'\)\] {
+  background-image: url('../src/assets/img/planet-webp.webp');
+}
+
 .bg-\[url\(\'\.\.\/src\/assets\/img\/planets-2120004\.jpg\'\)\] {
   background-image: url('../src/assets/img/planets-2120004.jpg');
+}
+
+.bg-\[url\(\'\.\.\/src\/assets\/img\/planet-webp\.web\'\)\] {
+  background-image: url('../src/assets/img/planet-webp.web');
 }
 
 .bg-cover {
@@ -1096,10 +1082,6 @@ video {
     margin-top: 2.5rem;
   }
 
-  .sm\:mr-20 {
-    margin-right: 5rem;
-  }
-
   .sm\:flex {
     display: flex;
   }
@@ -1110,10 +1092,6 @@ video {
 
   .sm\:w-full {
     width: 100%;
-  }
-
-  .sm\:flex-row {
-    flex-direction: row;
   }
 
   .sm\:space-x-9 > :not([hidden]) ~ :not([hidden]) {
@@ -1177,10 +1155,6 @@ video {
 
   .xl\:flex {
     display: flex;
-  }
-
-  .xl\:flex-row {
-    flex-direction: row;
   }
 
   .xl\:p-6 {
